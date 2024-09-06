@@ -14,10 +14,10 @@ const productsSchema = new Schema({
     required: true,
     min: [0, "El stock no puede ser negativo"],
   },
-  material: { type: String, required: true },
-  dimensiones: { type: String, required: true },
-  peso: { type: String, required: true },
-  codigo_products: { type: String, required: true, unique: true },
+  material: { type: String },
+  dimensiones: { type: String },
+  peso: { type: String  },
+  codigo_products: { type: String},
   imagen: [{ type: String, required: true }],
 });
 
