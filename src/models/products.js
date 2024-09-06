@@ -16,12 +16,11 @@ const productsSchema = new Schema({
   },
   material: { type: String },
   dimensiones: { type: String },
-  peso: { type: String  },
-  codigo_products: { type: String},
-  imagen: [{ type: String, required: true }],
+  peso: { type: String }, 
+  codigoProducto: { type: String }, 
+  imagen: [{ type: String, required: true }], 
 });
 
-// Middleware para verificar stock y ajustar disponibilidad
 productsSchema.pre("save", function (next) {
   this.disponibilidad = this.stock > 0;
   next();
