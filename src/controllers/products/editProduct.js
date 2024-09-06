@@ -3,42 +3,40 @@ const Products = require("../../models/products");
 const updateProduct = async (req, res) => {
   const { id } = req.params;
   const {
-    categorias,
-    subCategoria,
     nombre,
-    marca,
+    precio,
     descripcion,
-    imagenGeneral,
-    stockGeneral,
-    estado,
-    precioBase,
-    disponible,
-    tipo,
-    color,
-    almacenamiento,
-    modelo,
+    marca,
+    edad,
+    categoria,
+    disponibilidad,
+    stock,
+    material,
+    dimensiones,
+    peso,
+    codigo_products,
+    imagen,
   } = req.body;
 
   try {
     const updatedProduct = await Products.findByIdAndUpdate(
       id,
       {
-        categorias,
-        subCategoria,
         nombre,
-        marca,
+        precio,
         descripcion,
-        imagenGeneral,
-        stockGeneral,
-        estado,
-        precioBase,
-        disponible,
-        tipo,
-        color,
-        almacenamiento,
-        modelo,
+        marca,
+        edad,
+        categoria,
+        disponibilidad,
+        stock,
+        material,
+        dimensiones,
+        peso,
+        codigo_products,
+        imagen,
       },
-      { new: true }
+      { newtrue }
     );
     if (!updatedProduct) {
       return res.status(404).json({ message: "Product not found" });
