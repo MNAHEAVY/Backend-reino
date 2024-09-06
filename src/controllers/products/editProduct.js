@@ -14,7 +14,6 @@ const updateProduct = async (req, res) => {
     material,
     dimensiones,
     peso,
-    codigo_products,
     imagen,
   } = req.body;
 
@@ -33,7 +32,6 @@ const updateProduct = async (req, res) => {
         material,
         dimensiones,
         peso,
-        codigo_products,
         imagen,
       },
       { newtrue }

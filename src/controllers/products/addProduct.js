@@ -13,7 +13,6 @@ const createProduct = async (req, res) => {
     material,
     dimensiones,
     peso,
-    codigo_products,
     imagen,
   } = req.body;
 
@@ -30,7 +29,6 @@ const createProduct = async (req, res) => {
       material,
       dimensiones,
       peso,
-      codigo_products,
       imagen,
     });
     const savedProduct = await newProduct.save();
