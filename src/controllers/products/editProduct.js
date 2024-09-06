@@ -34,7 +34,7 @@ const updateProduct = async (req, res) => {
         peso,
         imagen,
       },
-      { newtrue }
+      { new: true }
     );
     if (!updatedProduct) {
       return res.status(404).json({ message: "Product not found" });
